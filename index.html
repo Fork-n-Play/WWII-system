@@ -14,7 +14,7 @@ scripts: [ index ]
     {% assign file = act[0] %}
     Loops = {{ act[1].loops }}<br>
     {% for step in act[1].steps %}
-      <h2>{{step}}</h2>
+      <h2>{{ step | capitalize }}</h2>
       {% assign subact = site.data[folder][step] %}
       {% for table in subact %}
         <h3>{{ table[1].name }}</h3>
