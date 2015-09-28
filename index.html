@@ -3,4 +3,24 @@ title: home
 layout: default
 scripts: [ index ]
 ---
-{{ site.description }}
+<header>
+  <h1>{{ site.name }}</h1>
+  <h3>{{ site.description }}</h3>
+</header>
+<article>
+{% for acts in site.setup %}
+  {% for act in acts %}
+    {% assign folder = act[1].folder %}
+    {% assign file = act[0] %}
+    Loops = {{ act[1].loops }}<br>
+    {% for step in act[1].steps %}
+      <h2>{{step}}</h2>
+      {% assign subact = site.data[folder][step] %}
+      {% for table in subact %}
+        <h3>{{ table[1].name }}</h3>
+        <p>{{ table[1].description }}</p>
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+</article>

@@ -12,8 +12,9 @@ scripts:
   - octokat
   - functions
 
-generation: # maybe location after unit, keep array
-  - unit: # both folder and filename
+setup: # maybe location after unit, keep array
+  - unit:
+      folder: units
       loops: 7
       steps: # steps, ordered
         - team

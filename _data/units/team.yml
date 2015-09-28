@@ -1,4 +1,6 @@
 axis: # choice hence array
+  name: Axis
   description: The Axis grew out of the diplomatic efforts of Germany, Italy and Japan, with affiliates states Romania, Hungary, Bulgaria, Slovakia and Thailand
 allies:
+  name: Allies
   description: Anti-German coalition consisted of France, Poland, Great Britain, British Commonwealth, Soviet Union and United States

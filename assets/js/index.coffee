@@ -7,16 +7,12 @@ login = (token) ->
     token = localStorage.getItem "player.token"
     octo = new Octokat { token: atob token }
     REPO = octo.repos "{{ site.owner }}{{ site.baseurl }}"
-    REPO.contents('_config.yaml').fetch {ref: 'gh-pages'}
-    .then null, (err) -> redirect # error
+    REPO.contents('_config.yaml').read({ref: 'gh-pages'})
     .then (yml) ->
-      if yml.content
-        f = atob yml.content
-        console.log atob yml.content
-        console.log 'logged', jsyaml.load f
-        # a = jsyaml.load f
-        # console.log a
-        # console.log jsyaml.dump a # reverse to yml
+      if yml
+        a = jsyaml.load yml
+        console.log a
+        console.log jsyaml.dump a # reverse to yml
       return
   else redirect
   return
