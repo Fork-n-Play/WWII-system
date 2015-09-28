@@ -4,7 +4,7 @@ baseurl: /WWII-system
 
 owner: Fork-n-Play
 
-description: Distribuited World War II à la Wolfenstein on top of Fork-n-Play
+description: "Distribuited World War II à la Wolfenstein on top of Fork-n-Play"
 
 scripts:
   - esprima
