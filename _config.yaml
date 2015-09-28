@@ -11,9 +11,9 @@ scripts:
   - js-yaml.min
   - octokat
 
-generation: # maybe location after unit
+generation: # maybe location after unit, keep array
   - unit: # both folder and filename
-    loops: 7
-    steps: # steps, ordered
-      - team
-      - class
+      loops: 7
+      steps: # steps, ordered
+        - team
+        - class

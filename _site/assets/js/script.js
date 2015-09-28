@@ -1,5 +1,5 @@
 (function() {
-  var REPO, octo, token;
+  var REPO, octo, redirect, token;
 
   if (localStorage.getItem("player.token")) {
     token = localStorage.getItem("player.token");
@@ -10,12 +10,19 @@
     REPO.contents('_config.yaml').fetch({
       ref: 'gh-pages'
     }).then(function(yml) {
-      return console.log(yml);
+      var a, f;
+      f = atob(yml.content);
+      a = jsyaml.load(f);
+      return console.log(a);
     }).then(null, function(err) {
-      return window.location = '/WWII-system/login/';
+      return redirect;
     });
   } else {
-    window.location = '/WWII-system/login/';
+    redirect;
   }
+
+  redirect = function() {
+    return window.location = '/WWII-system/login/';
+  };
 
 }).call(this);
