@@ -4,12 +4,13 @@ baseurl: /WWII-system
 
 owner: Fork-n-Play
 
-description: "Distribuited World War II à la Wolfenstein on top of Fork-n-Play"
+description: Distribuited World War II à la Wolfenstein on top of Fork-n-Play
 
 scripts:
   - esprima
   - js-yaml.min
   - octokat
+  - functions
 
 generation: # maybe location after unit, keep array
   - unit: # both folder and filename
