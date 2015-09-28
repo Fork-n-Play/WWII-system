@@ -8,10 +8,6 @@
     if (val) {
       but.setAttribute("disabled", "true");
       localStorage.setItem("player.token", btoa(val));
-      setInterval(function() {
-        window.location = '/WWII-system/';
-        window.location.reload(true);
-      }, 500);
     }
   });
 
