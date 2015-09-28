@@ -11,10 +11,10 @@ document.getElementById("submit").addEventListener('click', (e) ->
   if val
     but.setAttribute("disabled", "true")
     localStorage.setItem("player.token", btoa(val))
-    # setInterval ->
-    #   window.location = '{{ site.baseurl }}/'
-    #   window.location.reload(true)
-    #   return
-    # , 500
+    setInterval ->
+      window.location = '{{ site.baseurl }}/'
+      window.location.reload(true)
+      return
+    , 500
   return
 )
