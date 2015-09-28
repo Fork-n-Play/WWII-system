@@ -1,0 +1,14 @@
+disguise:
+  description: "Take the uniform off of a dead enemy soldier and wear it as a disguise"
+detection:
+  description: "Can detect Land Mines, enemy positions and enemy Command Post with binoculars"
+artillery:
+  description: "Calling in Artillery Strike issues target's map coordinates to any Mortar Soldier"
+defuse:
+  description: "Can defuse Dynamite, Satchel Charges and Land Mineseith the Engineer's Tool"
+repair:
+  description: "Can repair damaged vehicles and Machine Guns"
+biuld:
+  description: "Can build Command Posts or other constructible objectives"
+heal:
+  description: "Can heal a friendly unit rising its health and movement"

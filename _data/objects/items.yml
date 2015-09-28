@@ -1,0 +1,7 @@
+ammo_pack: {} # has default regeneration time in seconds
+canister:
+  - strike: # canister has a default regeneration time in seconds
+  - smoke:
+binoc: {}
+medi_pack: {}
+wrench: {}

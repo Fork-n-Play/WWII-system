@@ -1,0 +1,19 @@
+name: WWII-system
+
+baseurl: /WWII-system
+
+owner: Fork-n-Play
+
+description: Distribuited World War II à la Wolfenstein on top of Fork-n-Play
+
+scripts:
+  - esprima
+  - js-yaml.min
+  - octokat
+
+generation: # maybe location after unit
+  - unit: # both folder and filename
+    loops: 7
+    steps: # steps, ordered
+      - team
+      - class

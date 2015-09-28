@@ -1,0 +1,30 @@
+---
+title: prove
+layout: default
+---
+{% for folder in site.data %}
+  <h1>{{folder[0]}}</h1>
+  {% for files in folder %}
+    {% for file in files %}
+      <h2>{{file[0]}}</h2>
+      {% for obj in file[1] %}
+        <h4>{{obj[0]}}</h4>
+        {% if obj[1] != empty %}
+          {% for property in obj[1] %}
+            <p>{{property[0]}}: {{property[1]}}</p>
+            <!-- whe need recursively -->
+          {% endfor %}
+          <pre>{{obj[1]}}</pre>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+<br>
+{% for weapon in site.data.objects.weapons %}
+<h1>{{ weapon[0] }}</h1>
+  {% for property in weapon[1] %}
+    <h3>{{ property[0] }}</h3>
+    <pre>{{property[1]}}</pre>
+  {% endfor %}
+{% endfor %}

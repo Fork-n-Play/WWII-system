@@ -1,6 +1,0 @@
-name: WWII
-description: Distribuited World War II à la Wolfenstein on top of Fork-n-Play
-generation: # maybe location after unit
-  unit: 7 # both folder and filename: number of loops
-    - team # steps, ordered
-    - class

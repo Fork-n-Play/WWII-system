@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROVE &bull; WWII-system</title>
+    <!-- <meta property="og:image" content="/assets/images/record.ico">
+    <meta property="og:title" content="Prove | WWII-system">
+    <meta property="og:type" content="music"> -->
+    <!-- <link href="/assets/images/record.ico" rel="icon" type="image/x-icon" /> -->
+
+    <!-- ############# FEEDS ############# -->
+    <!-- <link rel="alternate" type="application/rss+xml" title=" - RSS" href="/feed.xml" /> -->
+
+    <!-- ############# CSS ############# -->
+    <link rel="stylesheet" href="/WWII-system/assets/css/normalize.css" type="text/css" media="screen">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Oswald:400,700,300|Inconsolata:400,700' type='text/css'>
+
+    <!-- SCSS -->
+    <link rel="stylesheet" href="/WWII-system/assets/css/style.css" type="text/css" media="screen">
+
+  </head>
+<body class="default">
+  <main>
+
+
+
+  <h1>objects</h1>
+  
+    
+      <h2></h2>
+      
+    
+  
+    
+      <h2>items</h2>
+      
+        <h4>ammo_pack</h4>
+        
+      
+        <h4>canister</h4>
+        
+          
+            <p>: </p>
+            <!-- whe need recursively -->
+          
+            <p>: </p>
+            <!-- whe need recursively -->
+          
+          <pre>{"strike"=>nil}{"smoke"=>nil}</pre>
+        
+      
+        <h4>binoc</h4>
+        
+      
+        <h4>medi_pack</h4>
+        
+      
+        <h4>wrench</h4>
+        
+      
+    
+      <h2>weapons</h2>
+      
+        <h4>light</h4>
+        
+          
+            <p>knife: silenced</p>
+            <!-- whe need recursively -->
+          
+            <p>pistol: {"team.axis"=>"Luger 9mm", "team.allies"=>"Colt .45", "class.cover_ops"=>{"silenced"=>true}}</p>
+            <!-- whe need recursively -->
+          
+          <pre>{"knife"=>"silenced", "pistol"=>{"team.axis"=>"Luger 9mm", "team.allies"=>"Colt .45", "class.cover_ops"=>{"silenced"=>true}}}</pre>
+        
+      
+        <h4>medium</h4>
+        
+          
+            <p>smg: {"team.axis"=>"MP40", "team.allies"=>"M1A1 Thompson"}</p>
+            <!-- whe need recursively -->
+          
+            <p>sniper_rifle: {"team.allies"=>"M1S Garand", "team.axis"=>"K43"}</p>
+            <!-- whe need recursively -->
+          
+            <p>granade_rifle: {"team.allies"=>"M1 Garand + M7 Grenade Launcher", "team.axis"=>"K43 + GPG40 GranatWerfer", "granades"=>5}</p>
+            <!-- whe need recursively -->
+          
+            <p>sten: {"overheat"=>true}</p>
+            <!-- whe need recursively -->
+          
+          <pre>{"smg"=>{"team.axis"=>"MP40", "team.allies"=>"M1A1 Thompson"}, "sniper_rifle"=>{"team.allies"=>"M1S Garand", "team.axis"=>"K43"}, "granade_rifle"=>{"team.allies"=>"M1 Garand + M7 Grenade Launcher", "team.axis"=>"K43 + GPG40 GranatWerfer", "granades"=>5}, "sten"=>{"overheat"=>true}}</pre>
+        
+      
+        <h4>heavy</h4>
+        
+          
+            <p>mg42: {"name"=>"MG42 machine gun", "description"=>"If unit is Prone can be mounted on bipod"}</p>
+            <!-- whe need recursively -->
+          
+            <p>mortar: {"name"=>"81mm Morser", "description"=>"French Brandt 81mm/3 Inch Mortar design"}</p>
+            <!-- whe need recursively -->
+          
+            <p>flamethrower: {"name"=>"Flamethrower", "description"=>"Fires a pressurized jet of liquid flame, can't be partially reloaded"}</p>
+            <!-- whe need recursively -->
+          
+            <p>panzerfaust: {"name"=>"Panzerfaust", "description"=>"Disposable one-shot weapon that fires a rocket-propelled grenade"}</p>
+            <!-- whe need recursively -->
+          
+          <pre>{"mg42"=>{"name"=>"MG42 machine gun", "description"=>"If unit is Prone can be mounted on bipod"}, "mortar"=>{"name"=>"81mm Morser", "description"=>"French Brandt 81mm/3 Inch Mortar design"}, "flamethrower"=>{"name"=>"Flamethrower", "description"=>"Fires a pressurized jet of liquid flame, can't be partially reloaded"}, "panzerfaust"=>{"name"=>"Panzerfaust", "description"=>"Disposable one-shot weapon that fires a rocket-propelled grenade"}}</pre>
+        
+      
+        <h4>explosives</h4>
+        
+          
+            <p>dynamite: {"description"=>"Has a 30 second timer", "regeneration"=>60}</p>
+            <!-- whe need recursively -->
+          
+            <p>landmine: {"description"=>"Can only be planted by Engineers", "regeneration"=>60}</p>
+            <!-- whe need recursively -->
+          
+            <p>granade: {"description"=>"Has 5 second timer", "quantity"=>2}</p>
+            <!-- whe need recursively -->
+          
+          <pre>{"dynamite"=>{"description"=>"Has a 30 second timer", "regeneration"=>60}, "landmine"=>{"description"=>"Can only be planted by Engineers", "regeneration"=>60}, "granade"=>{"description"=>"Has 5 second timer", "quantity"=>2}}</pre>
+        
+      
+    
+  
+
+  <h1>units</h1>
+  
+    
+      <h2></h2>
+      
+    
+  
+    
+      <h2>class</h2>
+      
+        <h4>soldier</h4>
+        
+          
+            <p>name: Soldier</p>
+            <!-- whe need recursively -->
+          
+            <p>description: Heavy weapon Specialist: can operate heavy two-handed weapon</p>
+            <!-- whe need recursively -->
+          
+            <p>weapon: {"granades"=>4, "heavy"=>["mg42", "mortar", "flamethrower", "panzerfaust"]}</p>
+            <!-- whe need recursively -->
+          
+            <p>skill: {"heavy"=>{}}</p>
+            <!-- whe need recursively -->
+          
+          <pre>{"name"=>"Soldier", "description"=>"Heavy weapon Specialist: can operate heavy two-handed weapon", "weapon"=>{"granades"=>4, "heavy"=>["mg42", "mortar", "flamethrower", "panzerfaust"]}, "skill"=>{"heavy"=>{}}}</pre>
+        
+      
+        <h4>medic</h4>
+        
+          
+            <p>name: Medic</p>
+            <!-- whe need recursively -->
+          
+            <p>description: Heal team-mates with Health Packs and revive dead teammates</p>
+            <!-- whe need recursively -->
+          
+            <p>items: {"medi_pack"=>{}}</p>
+            <!-- whe need recursively -->
+          
+            <p>weapon: {"medium"=>"smg", "granades"=>1}</p>
+            <!-- whe need recursively -->
+          
+            <p>skill: {"heal"=>{}}</p>
+            <!-- whe need recursively -->
+          
+          <pre>{"name"=>"Medic", "description"=>"Heal team-mates with Health Packs and revive dead teammates", "items"=>{"medi_pack"=>{}}, "weapon"=>{"medium"=>"smg", "granades"=>1}, "skill"=>{"heal"=>{}}}</pre>
+        
+      
+        <h4>engineer</h4>
+        
+          
+            <p>name: Engineer</p>
+            <!-- whe need recursively -->
+          
+            <p>description: Primary objective requires the special abilities of the Engineer</p>
+            <!-- whe need recursively -->
+          
+            <p>weapon: {"medium"=>[{"smg"=>{}}, {"rifle"=>{}}], "dynamite"=>{}, "landmine"=>"team.limit", "granade"=>{"quantity"=>4}}</p>
+            <!-- whe need recursively -->
+          
+            <p>item: {"wrench"=>{}}</p>
+            <!-- whe need recursively -->
+          
+            <p>skill: {"defuse"=>{}, "repair"=>{}, "biuld"=>{}}</p>
+            <!-- whe need recursively -->
+          
+          <pre>{"name"=>"Engineer", "description"=>"Primary objective requires the special abilities of the Engineer", "weapon"=>{"medium"=>[{"smg"=>{}}, {"rifle"=>{}}], "dynamite"=>{}, "landmine"=>"team.limit", "granade"=>{"quantity"=>4}}, "item"=>{"wrench"=>{}}, "skill"=>{"defuse"=>{}, "repair"=>{}, "biuld"=>{}}}</pre>
+        
+      
+        <h4>field_ops</h4>
+        
+          
+            <p>name: Field Ops</p>
+            <!-- whe need recursively -->
+          
+            <p>description: Field Operations Specialist: ammunition resupply and heavy fire support</p>
+            <!-- whe need recursively -->
+          
+            <p>weapon: {"medium"=>{"smg"=>{}}, "granade"=>2}</p>
+            <!-- whe need recursively -->
+          
+            <p>items: {"ammo_pack"=>{}, "canister"=>"strike"}</p>
+            <!-- whe need recursively -->
+          
+            <p>skill: {"artillery"=>{}}</p>
+            <!-- whe need recursively -->
+          
+          <pre>{"name"=>"Field Ops", "description"=>"Field Operations Specialist: ammunition resupply and heavy fire support", "weapon"=>{"medium"=>{"smg"=>{}}, "granade"=>2}, "items"=>{"ammo_pack"=>{}, "canister"=>"strike"}, "skill"=>{"artillery"=>{}}}</pre>
+        
+      
+        <h4>cover_ops</h4>
+        
+          
+            <p>name: Covert Ops</p>
+            <!-- whe need recursively -->
+          
+            <p>description: Covert Operations Specialist: espionage, reconnaissance and sabotage expert</p>
+            <!-- whe need recursively -->
+          
+            <p>weapon: {"medium"=>["sten", "fg42", "sniper_rifle"], "satchel"=>{}, "granade"=>2, "canister"=>"smoke"}</p>
+            <!-- whe need recursively -->
+          
+            <p>items: {"binoc"=>{}}</p>
+            <!-- whe need recursively -->
+          
+            <p>skill: {"disguise"=>{}, "detection"=>{}}</p>
+            <!-- whe need recursively -->
+          
+          <pre>{"name"=>"Covert Ops", "description"=>"Covert Operations Specialist: espionage, reconnaissance and sabotage expert", "weapon"=>{"medium"=>["sten", "fg42", "sniper_rifle"], "satchel"=>{}, "granade"=>2, "canister"=>"smoke"}, "items"=>{"binoc"=>{}}, "skill"=>{"disguise"=>{}, "detection"=>{}}}</pre>
+        
+      
+    
+      <h2>skill</h2>
+      
+        <h4>disguise</h4>
+        
+          
+            <p>description: Take the uniform off of a dead enemy soldier and wear it as a disguise</p>
+            <!-- whe need recursively -->
+          
+          <pre>{"description"=>"Take the uniform off of a dead enemy soldier and wear it as a disguise"}</pre>
+        
+      
+        <h4>detection</h4>
+        
+          
+            <p>description: Can detect Land Mines, enemy positions and enemy Command Post with binoculars</p>
+            <!-- whe need recursively -->
+          
+          <pre>{"description"=>"Can detect Land Mines, enemy positions and enemy Command Post with binoculars"}</pre>
+        
+      
+        <h4>artillery</h4>
+        
+          
+            <p>description: Calling in Artillery Strike issues target's map coordinates to any Mortar Soldier</p>
+            <!-- whe need recursively -->
+          
+          <pre>{"description"=>"Calling in Artillery Strike issues target's map coordinates to any Mortar Soldier"}</pre>
+        
+      
+        <h4>defuse</h4>
+        
+          
+            <p>description: Can defuse Dynamite, Satchel Charges and Land Mineseith the Engineer's Tool</p>
+            <!-- whe need recursively -->
+          
+          <pre>{"description"=>"Can defuse Dynamite, Satchel Charges and Land Mineseith the Engineer's Tool"}</pre>
+        
+      
+        <h4>repair</h4>
+        
+          
+            <p>description: Can repair damaged vehicles and Machine Guns</p>
+            <!-- whe need recursively -->
+          
+          <pre>{"description"=>"Can repair damaged vehicles and Machine Guns"}</pre>
+        
+      
+        <h4>biuld</h4>
+        
+          
+            <p>description: Can build Command Posts or other constructible objectives</p>
+            <!-- whe need recursively -->
+          
+          <pre>{"description"=>"Can build Command Posts or other constructible objectives"}</pre>
+        
+      
+        <h4>heal</h4>
+        
+          
+            <p>description: Can heal a friendly unit rising its health and movement</p>
+            <!-- whe need recursively -->
+          
+          <pre>{"description"=>"Can heal a friendly unit rising its health and movement"}</pre>
+        
+      
+    
+      <h2>team</h2>
+      
+        <h4>axis</h4>
+        
+          
+            <p>description: The Axis grew out of the diplomatic efforts of Germany, Italy and Japan, with affiliates states Romania, Hungary, Bulgaria, Slovakia and Thailand</p>
+            <!-- whe need recursively -->
+          
+          <pre>{"description"=>"The Axis grew out of the diplomatic efforts of Germany, Italy and Japan, with affiliates states Romania, Hungary, Bulgaria, Slovakia and Thailand"}</pre>
+        
+      
+        <h4>allies</h4>
+        
+          
+            <p>description: Anti-German coalition consisted of France, Poland, Great Britain, British Commonwealth, Soviet Union and United States</p>
+            <!-- whe need recursively -->
+          
+          <pre>{"description"=>"Anti-German coalition consisted of France, Poland, Great Britain, British Commonwealth, Soviet Union and United States"}</pre>
+        
+      
+    
+      <h2>unit</h2>
+      
+        <h4>unit</h4>
+        
+          
+          <pre></pre>
+        
+      
+    
+  
+
+<br>
+
+<h1>light</h1>
+  
+    <h3>knife</h3>
+    <pre>silenced</pre>
+  
+    <h3>pistol</h3>
+    <pre>{"team.axis"=>"Luger 9mm", "team.allies"=>"Colt .45", "class.cover_ops"=>{"silenced"=>true}}</pre>
+  
+
+<h1>medium</h1>
+  
+    <h3>smg</h3>
+    <pre>{"team.axis"=>"MP40", "team.allies"=>"M1A1 Thompson"}</pre>
+  
+    <h3>sniper_rifle</h3>
+    <pre>{"team.allies"=>"M1S Garand", "team.axis"=>"K43"}</pre>
+  
+    <h3>granade_rifle</h3>
+    <pre>{"team.allies"=>"M1 Garand + M7 Grenade Launcher", "team.axis"=>"K43 + GPG40 GranatWerfer", "granades"=>5}</pre>
+  
+    <h3>sten</h3>
+    <pre>{"overheat"=>true}</pre>
+  
+
+<h1>heavy</h1>
+  
+    <h3>mg42</h3>
+    <pre>{"name"=>"MG42 machine gun", "description"=>"If unit is Prone can be mounted on bipod"}</pre>
+  
+    <h3>mortar</h3>
+    <pre>{"name"=>"81mm Morser", "description"=>"French Brandt 81mm/3 Inch Mortar design"}</pre>
+  
+    <h3>flamethrower</h3>
+    <pre>{"name"=>"Flamethrower", "description"=>"Fires a pressurized jet of liquid flame, can't be partially reloaded"}</pre>
+  
+    <h3>panzerfaust</h3>
+    <pre>{"name"=>"Panzerfaust", "description"=>"Disposable one-shot weapon that fires a rocket-propelled grenade"}</pre>
+  
+
+<h1>explosives</h1>
+  
+    <h3>dynamite</h3>
+    <pre>{"description"=>"Has a 30 second timer", "regeneration"=>60}</pre>
+  
+    <h3>landmine</h3>
+    <pre>{"description"=>"Can only be planted by Engineers", "regeneration"=>60}</pre>
+  
+    <h3>granade</h3>
+    <pre>{"description"=>"Has 5 second timer", "quantity"=>2}</pre>
+  
+
+
+
+<!-- LOAD SITE SCRIPTS -->
+
+  <script src="/WWII-system/assets/js/esprima.js"></script>
+  <script src="/WWII-system/assets/js/js-yaml.min.js"></script>
+  <script src="/WWII-system/assets/js/octokat.js"></script>
+  
+<!-- LOAD PAGE SCRIPTS -->
+
+</main>
+</body>
+</html>
+

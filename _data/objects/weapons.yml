@@ -1,0 +1,43 @@
+light:
+  knife: silenced
+  pistol:
+    team.axis: Luger 9mm
+    team.allies: Colt .45
+    class.cover_ops:
+      silenced: true
+medium:
+  smg:
+    team.axis: MP40
+    team.allies: M1A1 Thompson
+  sniper_rifle:
+    team.allies: M1S Garand
+    team.axis: K43
+  granade_rifle:
+    team.allies: M1 Garand + M7 Grenade Launcher
+    team.axis: K43 + GPG40 GranatWerfer
+    granades: 5 # default value
+  sten:
+    overheat: true
+heavy:
+  mg42:
+    name: "MG42 machine gun"
+    description: "If unit is Prone can be mounted on bipod"
+  mortar:
+    name: "81mm Morser"
+    description: "French Brandt 81mm/3 Inch Mortar design"
+  flamethrower:
+    name: "Flamethrower"
+    description: "Fires a pressurized jet of liquid flame, can't be partially reloaded"
+  panzerfaust:
+    name: "Panzerfaust"
+    description: "Disposable one-shot weapon that fires a rocket-propelled grenade"
+explosives:
+  dynamite: # has regeneration time
+    description: "Has a 30 second timer"
+    regeneration: 60 # time unit defined in settings
+  landmine: # this has a quantity in commun with team (update)
+    description: "Can only be planted by Engineers"
+    regeneration: 60
+  granade:
+    description: "Has 5 second timer"
+    quantity: 2 # default

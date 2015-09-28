@@ -1,0 +1,80 @@
+soldier:
+  name: Soldier
+  description: "Heavy weapon Specialist: can operate heavy two-handed weapon"
+  weapon:
+    granades: 4
+    heavy:
+      - mg42
+      - mortar
+      - flamethrower
+      - panzerfaust
+  skill:
+    heavy: {}
+#
+# Medic
+#
+medic:
+  name: Medic
+  description: Heal team-mates with Health Packs and revive dead teammates
+  items:
+    medi_pack: {}
+  weapon:
+    medium: smg
+    granades: 1
+  skill: # default level is 1
+    heal: {} # direct skill level
+#
+# Engineer
+#
+engineer:
+  name: "Engineer"
+  description: "Primary objective requires the special abilities of the Engineer"
+  weapon:
+    medium: # array to choose from
+      - smg: {}
+      - rifle: {} # if an array element is an object, increase indention
+    dynamite: {} # has regeneration time
+    landmine: team.limit # this is a quantity in commun with team (update)
+    granade: # secify quantity
+      quantity: 4
+  item:
+    wrench: {}
+  skill:
+    defuse: {}
+    repair: {}
+    biuld: {}
+#
+# Field Ops
+#
+field_ops:
+  name: Field Ops
+  description: "Field Operations Specialist: ammunition resupply and heavy fire support"
+  weapon:
+    medium:
+      smg: {}
+    granade: 2
+  items:
+    ammo_pack: {} # has default regeneration time in seconds
+    canister: strike # canister has a default regeneration time in seconds
+  skill:
+    artillery: {} # default time unit is defined in regeneration property
+    # listen to this: Friendly Mortar Soldiers can then direct their firepower on to your target
+#
+# Covert Ops
+#
+cover_ops:
+  name: Covert Ops
+  description: "Covert Operations Specialist: espionage, reconnaissance and sabotage expert"
+  weapon:
+    medium:
+      - sten
+      - fg42
+      - sniper_rifle
+    satchel: {}
+    granade: 2 # this is standar granade
+    canister: smoke # direct definition of canister type ( like weapon=smg, weapon.smg=1 )
+  items:
+    binoc: {}
+  skill:
+    disguise: {}
+    detection: {}

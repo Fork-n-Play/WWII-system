@@ -1,0 +1,11 @@
+<!-- LOAD SITE SCRIPTS -->
+{% if site.scripts %}
+  {% for script in site.scripts %}<script src="{{ site.baseurl }}/assets/js/{{ script }}.js"></script>
+  {% endfor %}{% endif %}
+<!-- LOAD PAGE SCRIPTS -->
+{% if page.scripts %}
+  {% for script in page.scripts %}<script src="{{ site.baseurl }}/assets/js/{{ script }}.js"></script>
+  {% endfor %}{% endif %}
+</main>
+</body>
+</html>
